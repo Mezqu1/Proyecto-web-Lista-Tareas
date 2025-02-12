@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tareas</h1>
+        <div class="buttons">
+            <button id="pendientes">Pendientes</button>
+            <button id="cumplidas">Cumplidas</button>
+            <button id="agregar">Agregar Tarea</button>
+        </div>
+        <div id="taskList" class="task-list"></div>
+        <div id="addTaskForm" class="add-task-form hidden">
+            <input type="text" id="newTaskInput" placeholder="Nueva tarea">
+            <button id="addTaskButton">Agregar</button>
+        </div>
+    </div>
+    <script src="logic/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+package com.tuempresa.tuapp.controller;
+
+import com.tuempresa.tuapp.model.Tarea;
+import com.tuempresa.tuapp.repository.TareaRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/tareas")  // Define la ruta base para este controlador
+public class TareaController {
+
+    @Autowired
+    private TareaRepository tareaRepository;  // Inyectamos el repositorio para interactuar con la base de datos
+
+    // Endpoint para obtener todas las tareas
+    @GetMapping
+    public List<Tarea> obtenerTareas() {
+        return tareaRepository.findAll();  // Retorna todas las tareas usando el repositorio
+    }
+
+    // Endpoint para agregar una nueva tarea
+    @PostMapping
+    public Tarea agregarTarea(@RequestBody Tarea tarea) {
+        return tareaRepository.save(tarea);  // Guarda la nueva tarea en la base de datos
+    }
+
+    // Endpoint para actualizar una tarea existente
+    @PutMapping("/{id}")
+    public Tarea actualizarTarea(@PathVariable Long id, @RequestBody Tarea tarea) {
+        tarea.setId(id);  // Asegura que el ID de la tarea se mantenga
+        return tareaRepository.save(tarea);  // Guarda la tarea actualizada
+    }
+
+    // Endpoint para eliminar una tarea
+    @DeleteMapping("/{id}")
+    public void eliminarTarea(@PathVariable Long id) {
+        tareaRepository.deleteById(id);  // Elimina la tarea por su ID
+    }
+    @GetMapping("/test")
+public String test() {
+    return "¡La API está funcionando!";
+}
+
+}

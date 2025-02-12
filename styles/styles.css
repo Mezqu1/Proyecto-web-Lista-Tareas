@@ -1,0 +1,80 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ecf0f1;
+  color: #34495e;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #3498db;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.buttons button:hover {
+  background-color: #217dbb;
+}
+
+.task-list .task {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+.task-list .task input[type=checkbox] {
+  margin-right: 1rem;
+}
+.task-list .task.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.add-task-form {
+  display: flex;
+  margin-top: 1rem;
+}
+.add-task-form input[type=text] {
+  flex-grow: 1;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+}
+.add-task-form button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  background-color: #2ecc71;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.add-task-form button:hover {
+  background-color: #25a25a;
+}
+
+.hidden {
+  display: none;
+}/*# sourceMappingURL=styles.css.map */

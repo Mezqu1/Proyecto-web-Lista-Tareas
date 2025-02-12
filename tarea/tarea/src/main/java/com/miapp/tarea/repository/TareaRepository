@@ -1,0 +1,8 @@
+package com.tuempresa.tuapp.repository;
+
+import com.tuempresa.tuapp.model.Tarea;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface TareaRepository extends JpaRepository<Tarea, Long> {
+    // Aquí puedes agregar consultas personalizadas si las necesitas
+}
